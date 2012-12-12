@@ -29,7 +29,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>Auth</servlet-name>
-		<url-pattern>/_ah/auth</url-pattern>
+		<url-pattern>/_ah/auth/*</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>TodoApplication.jsp</welcome-file>
