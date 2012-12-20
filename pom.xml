@@ -25,6 +25,12 @@
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-api-jpa</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+            
 	</dependencies>
 	<profiles>
 		<profile>
@@ -47,6 +53,24 @@
 							<warName>ROOT</warName>
 						</configuration>
 					</plugin>
+					<plugin>
+                		<groupId>org.datanucleus</groupId>
+                		<artifactId>maven-datanucleus-plugin</artifactId>
+                		<version>3.1.0-m3</version>
+                		<configuration>
+                    		<log4jConfiguration>${basedir}/log4j.properties</log4jConfiguration>
+                    		<verbose>true</verbose>
+                    		<api>JPA</api>
+                		</configuration>
+                		<executions>
+                    		<execution>
+                        		<phase>process-classes</phase>
+                        		<goals>
+                            		<goal>enhance</goal>
+                        		</goals>
+                    		</execution>
+                		</executions>
+            		</plugin>
 				</plugins>
 			</build>
 		</profile>
