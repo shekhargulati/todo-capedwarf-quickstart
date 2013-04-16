@@ -8,7 +8,6 @@ import javax.persistence.Id;
 /**
  * Model class which will store the Todo Items
  * 
- * @author Lars Vogel
  * 
  */
 
@@ -30,6 +29,9 @@ public class Todo {
 		this.description = description;
 		this.url = url;
 		finished = false;
+	}
+	
+	public Todo() {
 	}
 
 	public Long getId() {
