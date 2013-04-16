@@ -26,6 +26,10 @@
         <extension module="org.jboss.as.jsf"/>
     </extensions>
 
+    <system-properties>
+        <property name="com.google.appengine.runtime.environment" value="Production"/>
+    </system-properties>
+
     <management>
         <security-realms>
             <security-realm name="ManagementRealm">
